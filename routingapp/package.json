@@ -1,0 +1,15 @@
+{
+  "name": "routingapp",
+  "version": "1.0.0",
+  "description": "routing exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sajal agawal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
+}

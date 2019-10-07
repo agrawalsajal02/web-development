@@ -1,0 +1,9 @@
+dbs collection
+show dbs
+db.dog.insert({name:"rusty",breed:"hemi"});
+db.dog.find()
+db.dogs.find({name:"rusty"})
+db.dogs.update({name:"rusty"},{breed:"labbour"})
+use dbs (for switching to dbs)
+db.dogs.update({name:"rusty"},{$set:{breed:"labbour"}})
+db.dogs.remove({breed:"labbour"}).limit(2)
