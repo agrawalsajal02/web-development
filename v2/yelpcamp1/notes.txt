@@ -22,3 +22,10 @@ four routes are
 
 to drop databse
 dp.campground.drop(); 
+
+
+
+//findOne
+
+
+* to properly refractor you code use refractoring

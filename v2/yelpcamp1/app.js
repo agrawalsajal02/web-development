@@ -1,18 +1,11 @@
 var express=	require("express"),
 	app=		express(),
 	mongoose=	require("mongoose"),
-	bodyparser=	require("body-parser");
+	bodyparser=	require("body-parser"),
+	Campground=require("./models/campground");
 
 app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/yelp_camp");
-
-//schema setup
-var campgroundSchema=new mongoose.Schema({
-	name:String,
-	image:String
-});
-
-var Campground=mongoose.model("Campground",campgroundSchema);
 /*
 Campground.create({
 name:"granite hills",image:"https://pixabay.com/get/57e8d0424a5bae14f6da8c7dda793f7f1636dfe2564c704c722f7bd69245c15d_340.jpg"
@@ -26,7 +19,7 @@ name:"granite hills",image:"https://pixabay.com/get/57e8d0424a5bae14f6da8c7dda79
 		
 	}
 });
-*/
+*//*
 var camp=[
 		{name :"salmon creek ",image:"https://pixabay.com/get/57e8d1454b56ae14f6da8c7dda793f7f1636dfe2564c704c722f7bd69245c15d_340.jpg"},
 			  {name:"granite hills",image:"https://pixabay.com/get/57e8d0424a5bae14f6da8c7dda793f7f1636dfe2564c704c722f7bd69245c15d_340.jpg"},
@@ -36,7 +29,7 @@ var camp=[
 			  {name:"granite hills",image:"https://pixabay.com/get/57e8d0424a5bae14f6da8c7dda793f7f1636dfe2564c704c722f7bd69245c15d_340.jpg"},
 			  {name:"mountain goat",image:"https://pixabay.com/get/50e9d4474856b108f5d084609620367d1c3ed9e04e50744e752f79d19f49c0_340.jpg"},
 			  {name:"hili palace",image:"https://pixabay.com/get/57e0d6424b56ad14f6da8c7dda793f7f1636dfe2564c704c722f7bd69245c15d_340.jpg"}
-	];
+	];*/
 app.use(bodyparser.urlencoded({extended : true}));
 
 app.get("/",function(req,res){
@@ -52,7 +45,7 @@ Campground.find({},function(err,allcampa){
 	}
 	else{
 		console.log("campgrounds are");
-		res.render("campground.ejs",{camp:allcampa});
+		res.render("index.ejs",{camp:allcampa});
 	}
 });
 	
@@ -89,13 +82,33 @@ app.post("/campground",function(req,res){
 });
 
 
+
+
+//show
+app.get("/campground/:id",function(req,res){
+	//find the campgroud with required id and 
+		//render the show template with that campground
+		//res.send("this weill be show page one day");
+	var thing=req.params.id;
+	Campground.findById(thing,function(err,found){
+		if(err){
+			console.log("there is an error");
+		}
+		else{
+		console.log("we hav found the camp ");
+			res.render("show.ejs",{camp:found});
+		}
+	});  
+	})
+	
+	
 app.get("/campground/new",function(req,res){
 		res.render("new.ejs");
 	});
 
 
 
-app.listen(4000,function(){
+app.listen(8000,function(){
 	console.log("server is started");
 						  });
 
