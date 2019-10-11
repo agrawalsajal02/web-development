@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+	<div class="container thumbnail text-center">
+		
+<p>
+	<h1>
+		name: 
+<%= camp.name %></h1>
+<div class="thumbnail">
+<image  height=300 width=300 class="img-fluid img-thumbnail" src="<%=camp.image%>" >
+</div><p>here is  <%=camp.description%></p>
+	</p>
+	<p><a class="btn btn-success" href="/campground/<%=camp._id%>/comment/new">Add New Comment</a> </p>
+<p>
+	
+   <% camp.comment.forEach(function(val){  %>
+   <h4> <p><b><%=val.author%></b>: <%=val.text%> </p></h4>
+	<% }); %>
+
+</p>	
+			<a href="/campground">Go back</a>
+
+		</div>
+<% include ../partials/footer.ejs %>
