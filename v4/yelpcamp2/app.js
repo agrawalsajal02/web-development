@@ -6,7 +6,7 @@ var express=	require("express"),
 	Campground=require("./models/campground"),
 	seed=require("./seed");
 
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
 mongoose.connect("mongodb://localhost/yelp_campv4");
 seed();
 

@@ -4,18 +4,18 @@ var comment=require("./models/comment");
 var data =[{
 name:"daniel",
 image:"http://www.nitp.ac.in/images/DSC_0108.jpg",
-description:"shala"
+description:"The world leader in beauty, L’Oréal is present in 130 countries on five continents. ... The small company founded by Eugène Schueller in 1909 has become the number one cosmetic group in the world. ... The world leader in beauty, L’Oréal is today present in 140 countries."
 },
 {
     name:"mukesh",
     image:"http://www.nitp.ac.in/images/senate_2018.jpg",
-    description:"ramatae"
+    description:"The world leader in beauty, L’Oréal is present in 130 countries on five continents. ... The small company founded by Eugène Schueller in 1909 has become the number one cosmetic group in the world. ... The world leader in beauty, L’Oréal is today present in 140 countries."
     
 },
 {
     name:"mech",
 image:"http://www.nitp.ac.in/images/President_Kovindji.jpg",
-description:"engineer"
+description:"The world leader in beauty, L’Oréal is present in 130 countries on five continents. ... The small company founded by Eugène Schueller in 1909 has become the number one cosmetic group in the world. ... The world leader in beauty, L’Oréal is today present in 140 countries."
 
 }
     ];
