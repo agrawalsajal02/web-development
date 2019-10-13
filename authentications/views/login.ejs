@@ -1,0 +1,22 @@
+<% include partials/header.ejs%>
+<h1>this is login page</h1>
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-4">    <form class="form-group" method="POST" action="/login">
+            <label>USERNAME</label>
+            <input class="form-control" type="text" name="username" placeholder="type username">
+            <label>PASSWORD</label>
+            <input class="form-control" type="password" name="password" placeholder="type password">
+        <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        </div>
+        </div>
+        </div>
+
+        <h4>Click here for <a href="/register">Register</a></h4>
+        <h4>Click here for <a href="/login">Login</a></h4>
+        <h4>Click here for <a href="/logout">Logout</a></h4>
+        <% include partials/footer.ejs%>

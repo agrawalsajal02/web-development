@@ -1,0 +1,31 @@
+//data persistance video 2
+restful routing
+
+
+name    url      verb    dsecription
+===================================================
+INDEX  /dogs      GET     Display a list of all dogs
+NEW    /dogs/new  GET    Display Form To create New Dog
+CREATE  /dogs   Post   Add new Dog to Db
+SHOWS   /dogs/:id  GET  Display a Perticular Dog   
+
+//there pattern follw by api
+api.github.com/users
+
+four routes are
+
+
+
+
+
+
+
+to drop databse
+dp.campground.drop(); 
+
+
+
+//findOne
+
+
+* to properly refractor you code use refractoring

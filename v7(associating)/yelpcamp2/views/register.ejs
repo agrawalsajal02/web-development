@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs%>
+
+
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-4">
+        <h1>registration page</h1>
+
+        <form class="form-group" action="/register" method="POST">
+<label>Username</label>
+<input class="form-control" type="text" name="username" placeholder="type username">
+<br>
+<label>Password</label>
+<input class="form-control" type="password" name="password" placeholder="type password"><br>
+<button class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
+<% include ./partials/footer.ejs%>

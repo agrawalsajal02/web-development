@@ -1,0 +1,67 @@
+<% include ../partials/header.ejs %>
+<style>
+.norm{
+	margin-bottom:40px;
+}
+</style>
+	<div class="container text-center">
+	<div class="row">
+		<div class="col-md-3">
+			<p>Yelp Camp</p>
+			<div class="list-group">
+				<li class="list-group-item active">Info 1</li>
+				<li class="list-group-item">Info 2</li>
+				<li class="list-group-item">Info 3</li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+					<image class="img-responsive " src="<%=camp.image%>" >
+    <div class="caption full">
+		  <div class="pull-right"><h4>$9.00/night</h4></div>
+		  <h2><a href="#"><%= camp.name %></a></h2><br>
+		  <p class="text-left"><%=camp.description%></p> 
+	</div>
+		</div> 
+			<div class="well">
+				<div class="text-right">
+							<a class="btn btn-success" href="/campground/<%=camp._id%>/comment/new">Add New Comment</a>
+						</div>
+<hr>
+		
+									<% camp.comment.forEach(function(val){  %>
+									<div class="row">
+							<div class="col-md-12">
+									<span class="pull-right">10 Days Ago</span>		
+									<div class="pull-left">
+
+<br>
+									<b>	<%=val.author%></b>: 
+										<p><%=val.text%></p>
+									</div>
+								
+									</div> 
+								</div>
+								
+								 	<% }); %>
+							 
+								</div>
+	</div>
+		
+<!-- 
+<p>
+<div class="thumbnail">
+<image  height=300 width=300 class="img-fluid img-thumbnail" src="<%=camp.image%>" >
+</div>
+	<p> </p>
+<p>
+	
+   <% camp.comment.forEach(function(val){  %>
+   <h4> <p><b><%=val.author%></b>: <%=val.text%> </p></h4>
+	<% }); %>
+
+</p>	
+			<a href="/campground">Go back</a> -->
+
+		</div>
+<% include ../partials/footer.ejs %>
