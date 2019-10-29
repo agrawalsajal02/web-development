@@ -54,3 +54,4 @@ app.use("/campground/:id/comment",commentroutes);
 app.listen(9000,function(){
 	console.log("server is started");
 						  });
+

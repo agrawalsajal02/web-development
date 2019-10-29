@@ -20,7 +20,9 @@
     <div class="caption full">
 		  <div class="pull-right"><h4>$9.00/night</h4></div>
 		  <h2><a href="#"><%= camp.name %></a></h2><br>
+		  
 		  <p class="text-left"><%=camp.description%></p> 
+		  <p class="text-left"><b><em>Submitted By:</em><%=camp.author.username%></b></p> 
 	</div>
 		</div> 
 			<div class="well">
@@ -28,16 +30,13 @@
 							<a class="btn btn-success" href="/campground/<%=camp._id%>/comment/new">Add New Comment</a>
 						</div>
 <hr>
-		
 									<% camp.comment.forEach(function(val){  %>
 									<div class="row">
 							<div class="col-md-12">
 									<span class="pull-right">10 Days Ago</span>		
-									<div class="pull-left">
-
+									<div class="pull-left text-left">
+<b><%=val.author.username%></b><p><%=val.text%></p>
 <br>
-									<b>	<%=val.author%></b>: 
-										<p><%=val.text%></p>
 									</div>
 								
 									</div> 

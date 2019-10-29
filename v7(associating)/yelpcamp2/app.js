@@ -15,8 +15,10 @@ var express=	require("express"),
 	
 
 app.use(express.static(__dirname+"/public"));
-mongoose.connect("mongodb://localhost/yelp_campv4");
-seed();
+mongoose.connect("mongodb://localhost/yelp_campv4",function(err){
+	console.log("db is connected");
+});
+//seed();
 
 app.use(bodyparser.urlencoded({extended : true}));
 
